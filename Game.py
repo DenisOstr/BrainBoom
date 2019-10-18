@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 import sys, random
-
 from core import *
 
 #TODO: loop
@@ -19,7 +18,7 @@ def gameLoop():
                 sys.exit()
         elif userSelect in menuSelectForEditor:
             if userSelect == menuSelectForEditor[0]:
-                print('Editor')
+                adminAuth()
         else:
             print(menuSelectNotExistsEng)
             continue
@@ -31,7 +30,6 @@ def update():
 
 def render():
     gameLoop()
-
 
 # def gameWin():
 #     attempts += 1

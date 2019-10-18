@@ -7,5 +7,16 @@ menuScreenRu = '''\nВыберите:
         2) Нажмите клавишу Q, чтобы выйти'''
 
 menuSelectNotExistsEng = 'This function does not exists'
-
 menuSelectNotExistsRu = 'Данной функции не существует'
+
+enterUsernameEng = 'Enter username: '
+enterUsernemeRu = 'Введите имя пользователя: '
+
+loginAdminPanelEng = 'Login to Admin panel\n'
+loginAdminPanelRu = 'Вход в Админа панель\n'
+
+enterPasswordEng = 'Enter password: '
+enterPasswordRu = 'Введите пароль: '
+
+dataIncorrectEng = '\nThe data entered is incorrect, try again'
+dataIncorrectRu = 'Данные введены неверно, попробуйте еще раз'
