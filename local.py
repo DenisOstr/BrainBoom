@@ -5,6 +5,7 @@ gameLanguageRu = 'Выберите язык'
 
 languageList = 'English / Русский'
 
+gameSettingsTitle = ''
 
 # Menu Local
 menuScreenEng = '''\nSelect:
