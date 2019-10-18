@@ -29,7 +29,7 @@ gameLogoACSII = '''
 
 #languageList = 'English / Русский'
 
-# Menu Local
+# Sratr Menu
 menuScreenEng = '''\nSelect:
         1) Press S key for Start the game
         2) Press Q key for Quit from the game'''

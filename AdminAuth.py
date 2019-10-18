@@ -8,7 +8,7 @@ from core import *
 #TODO: If user does exist then open the editor
 
 def authentication():
-    print(loginAdminPanelEng)
+    print(loginAdminPanel)
 
     while True:
         username = input(enterUsernameEng)
@@ -22,7 +22,6 @@ def authentication():
             print('This user does not exist!')
             continue
 
-    
+
 def encrypt(pswd):
     return hashlib.sha256(pswd.encode())
-

@@ -6,10 +6,11 @@ from core import *
 #TODO: update
 #TODO: render
 
+
 def run():
     while True:
         print(gameLogoACSII)
-        print(menuScreenEng)
+        print(menuScreen)
         userSelect = input('> ')
 
         if userSelect in menuSelect:
@@ -25,11 +26,42 @@ def run():
             continue
 
 
+
+def setLanguage():
+    while True:
+        userSelectLanguage = input('eng / ru\n> ')
+
+
+        if userSelectLanguage == 'eng':
+            # Sratr Menu
+            global menuScreen
+            menuScreen == menuScreenEng
+            global menuSelectNotExists
+            menuSelectNotExists == menuSelectNotExistsEng
+
+            # Auth Local
+            global loginAdminPanel
+            loginAdminPanel == loginAdminPanelEng
+
+            break
+
+        elif userSelectLanguage == 'ru':
+            # Sratr Menu
+            menuScreen = menuScreenRu
+            menuSelectNotExists == menuSelectNotExistsRu
+
+            # Auth Local
+            loginAdminPanel == loginAdminPanelRu
+
+
+            break
+
 def update():
     pass
 
 
 def render():
+    setLanguage()
     run()
 
 
