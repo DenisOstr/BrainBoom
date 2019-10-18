@@ -2,11 +2,11 @@
 import sys, random
 from core import *
 
+#TODO: set language
 #TODO: loop
 #TODO: update
 #TODO: render
-#TODO: set language
-menuScreen = ''
+
 
 def languageSelection():
     print('Set language | Выберите язык')
@@ -17,22 +17,28 @@ def languageSelection():
         if lang == 'RU':
             global menuScreen
             menuScreen = '''\nВыберите:
-        1) Нажмите клавишу S, чтобы начать игру
-        2) Нажмите клавишу Q, чтобы выйти'''
+    1) Нажмите клавишу S, чтобы начать игру
+    2) Нажмите клавишу Q, чтобы выйти'''
+
+            global menuSelectNotExists
+            menuSelectNotExists = 'Данной функции не существует'
+
 
             break
 
 
         elif lang == 'EN':
             menuScreen = '''\nSelect:
-        1) Press S key for Start the game
-        2) Press Q key for Quit from the game'''
+    1) Press S key for Start the game
+    2) Press Q key for Quit from the game'''
+
+            menuSelectNotExists = 'This function does not exists'
+
 
             break
 
         else:
             print('xxxx')
-
 
 def gameLoop():
     while True:
@@ -44,11 +50,17 @@ def gameLoop():
                 print('Start Game')
             elif userSelect == menuSelect[3] or userSelect == menuSelect[4] or userSelect == menuSelect[5]:
                 sys.exit()
+
+            # настройка языка в нутри игры
+
         elif userSelect in menuSelectForEditor:
             if userSelect == menuSelectForEditor[0]:
                 adminAuth()
+
+
+
         else:
-            print(menuSelectNotExistsEng)
+            print(menuSelectNotExists)
             continue
 
 

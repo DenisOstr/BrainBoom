@@ -1,9 +1,3 @@
-from core import *
-
-
-menuSelectNotExistsEng = 'This function does not exists'
-menuSelectNotExistsRu = 'Данной функции не существует'
-
 # Admin panel
 loginAdminPanelEng = 'Login to Admin panel\n'
 loginAdminPanelRu = 'Вход в Админа панель\n'
