@@ -1,5 +1,5 @@
 from core import *
-import hashlib
+import getpass, hashlib
 
 #TODO: Request user data: (login, password)         +
 #TODO: Check user data in database (file)           + save carConst
@@ -12,8 +12,7 @@ def adminAuth():
 
     while True:
         username = input(enterUsernameEng)
-        password = input(enterPasswordEng)
-
+        password = getpass.getpass(enterPasswordEng)
         password = hashlib.sha256(password.encode())
 
         if username == 'root' and encryptedPassword == password.hexdigest():
