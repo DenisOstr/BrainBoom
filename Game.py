@@ -7,7 +7,7 @@ from core import *
 #TODO: update
 #TODO: render
 
-def gameLoop():
+def run():
     while True:
         print(menuScreenEng)
         userSelect = input('> ')
@@ -19,7 +19,7 @@ def gameLoop():
                 sys.exit()
         elif userSelect in menuSelectForEditor:
             if userSelect == menuSelectForEditor[0]:
-                print('Editor')
+                authentication()
         else:
             print(menuSelectNotExistsEng)
             continue
@@ -30,7 +30,7 @@ def update():
 
 
 def render():
-    gameLoop()
+    run()
 
 
 # def gameWin():
