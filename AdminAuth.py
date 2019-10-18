@@ -24,3 +24,4 @@ def authentication():
     
 def encrypt(pswd):
     return hashlib.sha256(pswd.encode())
+

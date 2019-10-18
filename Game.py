@@ -1,28 +1,33 @@
 #!/usr/bin/env python3
 import sys, random
-
 from core import *
 
+#TODO: set language
 #TODO: loop
 #TODO: update
 #TODO: render
 
+
 def run():
     while True:
-        print(menuScreenEng)
+        print(menuScreen)
         userSelect = input('> ')
 
-        if userSelect in menuSelect:
-            if userSelect == menuSelect[0] or userSelect == menuSelect[1] or userSelect == menuSelect[2]:
-                print('Start Game')
-            elif userSelect == menuSelect[3] or userSelect == menuSelect[4] or userSelect == menuSelect[5]:
-                sys.exit()
-        elif userSelect in menuSelectForEditor:
-            if userSelect == menuSelectForEditor[0]:
-                authentication()
-        else:
-            print(menuSelectNotExistsEng)
-            continue
+        while True:
+            print(gameSettingsTitle)
+            userSelect = input('> ')
+
+            if userSelect in menuSelect:
+                if userSelect == menuSelect[0] or userSelect == menuSelect[1] or userSelect == menuSelect[2]:
+                    print('Start Game')
+                elif userSelect == menuSelect[3] or userSelect == menuSelect[4] or userSelect == menuSelect[5]:
+                    sys.exit()
+            elif userSelect in menuSelectForEditor:
+                if userSelect == menuSelectForEditor[0]:
+                    authentication()
+            else:
+                print(menuSelectNotExists)
+                continue
 
 
 def update():
@@ -55,11 +60,11 @@ def render():
 
 # def gameLevel_1():
 #     print('\nЗадача 1')
-#     print('''
+#     print(
 #     8631 = 3
 #     3625 = 1
 #     9612 = 2
-#     7831 = x''')
+#     7831 = x)
 
 #     while True:
 #         x = input('\nВведите значение x (int)\n> ')
