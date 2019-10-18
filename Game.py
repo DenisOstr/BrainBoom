@@ -1,33 +1,27 @@
-#!/usr/bin/env python3
 import sys, random
+
 from core import *
 
-#TODO: set language
 #TODO: loop
 #TODO: update
 #TODO: render
 
-
 def run():
     while True:
-        print(menuScreen)
+        print(menuScreenEng)
         userSelect = input('> ')
 
-        while True:
-            print(gameSettingsTitle)
-            userSelect = input('> ')
-
-            if userSelect in menuSelect:
-                if userSelect == menuSelect[0] or userSelect == menuSelect[1] or userSelect == menuSelect[2]:
-                    print('Start Game')
-                elif userSelect == menuSelect[3] or userSelect == menuSelect[4] or userSelect == menuSelect[5]:
-                    sys.exit()
-            elif userSelect in menuSelectForEditor:
-                if userSelect == menuSelectForEditor[0]:
-                    authentication()
-            else:
-                print(menuSelectNotExists)
-                continue
+        if userSelect in menuSelect:
+            if userSelect == menuSelect[0] or userSelect == menuSelect[1] or userSelect == menuSelect[2]:
+                print('Start Game')
+            elif userSelect == menuSelect[3] or userSelect == menuSelect[4] or userSelect == menuSelect[5]:
+                sys.exit()
+        elif userSelect in menuSelectForEditor:
+            if userSelect == menuSelectForEditor[0]:
+                authentication()
+        else:
+            print(menuSelectNotExists)
+            continue
 
 
 def update():

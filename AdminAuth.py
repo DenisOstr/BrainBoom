@@ -15,7 +15,8 @@ def authentication():
         password = getpass.getpass(enterPasswordEng)
 
         if username == 'root' and encryptedPassword == encrypt(password).hexdigest():
-            print('Welcome!')
+            editor = Editor()
+            editor.mainMenu()
             break
         else:
             print('This user does not exist!')
