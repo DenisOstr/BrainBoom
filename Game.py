@@ -8,6 +8,7 @@ from core import *
 
 def run():
     while True:
+        print(gameLogoACII)
         print(menuScreenEng)
         userSelect = input('> ')
 
