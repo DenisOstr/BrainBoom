@@ -10,7 +10,7 @@ from core import *
 
 def run():
     while True:
-        print(menuScreen)
+        print(menuScreenEng)
         userSelect = input('> ')
 
         while True:
