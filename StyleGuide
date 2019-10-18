@@ -25,3 +25,7 @@ Example: gl -> gameLoop
     ИСКЛЮЧЕНИЕ Editor.py
 
 RULE #8: Использовать одинарные ковычки
+
+у меня идея как заменить на более легкое и элегантное решение menuEditor / menuSelect / menuSelectForEditor
+mode = input('ляляля')
+if mode in 'encrypt e 1  decrypt d 2'.split():
