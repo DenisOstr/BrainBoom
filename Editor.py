@@ -12,42 +12,40 @@ class Editor():
 
 
     def mainMenu(self):
-        print('Welcome to the Editor')
-        print('''
-            1) Press C key for create level
-            2) Press S key for show levels
-            3) Press U key for update level
-            4) Press D key for delete level
-            5) Press Backspace for back to main game menu
-        ''')
+        print(menuEditorEng)
+        # NameError: name 'username' is not defined -> AdminAuth.py username
+        #print(userAuthenticationEng, username)
 
         while True:
             userSelect = input('> ')
 
-            if userSelect == 'C':
-                self.createLevel(self)
-            elif userSelect == 'S':
-                self.showLevel(self)
-            elif userSelect == 'U':
-                self.updateLevel(self)
-            elif userSelect == 'D':
-                self.deleteLevel(self)
-            elif userSelect == 'Backspace':
-                run()
+            if userSelect in menuEditor:
+                if userSelect == menuEditor[0] or menuEditor[1] or menuEditor[2]:
+                    self.createLevel(self)
+                elif userSelect == menuEditor[3] or menuEditor[4] or menuEditor[5]:
+                    self.showLevel(self)
+                elif userSelect == menuEditor[6] or menuEditor[7] or menuEditor[8]:
+                    self.updateLevel(self)
+                elif userSelect == menuEditor[9] or menuEditor[10] or menuEditor[11]:
+                    self.deleteLevel(self)
+                elif userSelect == menuEditor[12] or menuEditor[13] or menuEditor[14]:
+                    run()
             else:
-                print('This key is not found')
+                print(userSelectIncorrect)
                 continue
 
 
     def createLevel(self):
-        print('Enter the description of level: ')
+        print(descriptionLevelEng)
         desc = input('> ')
 
-        print('Enter the picture of level: ')
+        print(pictureLevelEng)
         pic = input('> ')
 
-        print('Enter the answer of level: ')
-        ans = input('> ')
+        # there can be several answers to the same level
+        # first ask how many answers should be
+        print(andwerLevelEng)
+        ans = input('>')
 
         # while True:
         #     i = 0
@@ -56,7 +54,7 @@ class Editor():
 
 
     def showLevel(self):
-        print('Enter the number of level: ')
+        print(enterNumberLevelEng)
         numberOfLevel = input('> ')
 
         # firstPos = file.startswith("level:")
