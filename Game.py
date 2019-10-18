@@ -5,10 +5,38 @@ from core import *
 #TODO: loop
 #TODO: update
 #TODO: render
+#TODO: set language
+menuScreen = ''
+
+def languageSelection():
+    print('Set language | Выберите язык')
+
+    while True:
+        lang = input('EN / RU: ')
+
+        if lang == 'RU':
+            global menuScreen
+            menuScreen = '''\nВыберите:
+        1) Нажмите клавишу S, чтобы начать игру
+        2) Нажмите клавишу Q, чтобы выйти'''
+
+            break
+
+
+        elif lang == 'EN':
+            menuScreen = '''\nSelect:
+        1) Press S key for Start the game
+        2) Press Q key for Quit from the game'''
+
+            break
+
+        else:
+            print('xxxx')
+
 
 def gameLoop():
     while True:
-        print(menuScreenEng)
+        print(menuScreen)
         userSelect = input('> ')
 
         if userSelect in menuSelect:
@@ -29,6 +57,7 @@ def update():
 
 
 def render():
+    languageSelection()
     gameLoop()
 
 # def gameWin():
