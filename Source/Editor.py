@@ -6,12 +6,14 @@ from core import *
 #TODO /SUCCESS /D: Menu of editor (create level, show level (enter level number), update level, delete level)
 #TODO: In file: level count, number of level, author, description, picture, answer
 
-class Editor():
+class Editor:
     def __init__(self):
-        pass
+        self.count = 0
+        self.level = 0
 
 
-    def mainMenu(self):
+    def mainMenu(self, username):
+        print('You logged in as', username)
         setLanguage('menuEditor')
 
         while True:
@@ -19,13 +21,13 @@ class Editor():
 
             if userSelect in menuEditor:
                 if userSelect == menuEditor[0] or userSelect == menuEditor[1]:
-                    self.createLevel(self)
+                    self.createLevel(username)
                 elif userSelect == menuEditor[2] or userSelect == menuEditor[3]:
-                    self.showLevel(self)
+                    self.showLevel()
                 elif userSelect == menuEditor[4] or userSelect == menuEditor[5]:
-                    self.updateLevel(self)
+                    self.updateLevel()
                 elif userSelect == menuEditor[6] or userSelect == menuEditor[7]:
-                    self.deleteLevel(self)
+                    self.deleteLevel()
                 elif userSelect == menuEditor[8]:
                     sys.exit()
             else:
@@ -33,15 +35,37 @@ class Editor():
                 continue
 
 
-    def createLevel(self):
-        setLanguage('descriptionLevel')
-        desc = input('> ')
+    def createLevel(self, username):
+        while True:
+            author = username
 
-        setLanguage('pictureLevel')
-        pic = input('> ')
+            self.level = self.count
 
-        setLanguage('answerLevel')
-        ans = input('> ')
+            setLanguage('descriptionLevel')
+            desc = input('> ')
+
+            setLanguage('pictureLevel')
+            pic = input('> ')
+
+            setLanguage('answerLevel')
+            ans = input('> ')
+
+            self.count = 1
+
+            _mCreateLevel = Model()
+            _mCreateLevel.createLevelModel(self.count, self.level, author, desc, pic, ans)
+
+            print('Are you want to exit or continue?')
+            print('Press Q for exit or C for continue: ')
+            userSelect = input('> ')
+
+            if userSelect == 'C':
+                continue
+            elif userSelect == 'Q':
+                self.mainMenu(username)
+            else:
+                print('This key is not found')
+                continue
 
         # while True:
         #     i = 0
@@ -66,30 +90,3 @@ class Editor():
 
     def deleteLevel(self):
         pass
-
-
-# levelCount = 5
-
-# level: 1
-# author: Denis
-# description: ...
-# picture: ...
-# answer: ...
-
-# level: 2
-# author: Nikita
-# description: ...
-# picture: ...
-# answer: ...
-
-# level: 3
-# author: Nikita
-# description: ...
-# picture: ...
-# answer: ...
-
-# 1
-# Nikita
-# ...
-# ..
-# .
