@@ -19,11 +19,15 @@ def authentication():
 
         if username == 'root' and encryptedPassword == encrypt(password).hexdigest():
             editor = Editor()
-            editor.mainMenu()
+            editor.mainMenu(username)
             break
         else:
-            print('This user does not exist!')
-            continue
+            if username != 'root':
+                print('User with such username is not found')
+                continue
+            elif encryptedPassword != encrypt(password).hexdigest():
+                print('User with such password is not found')
+                continue
 
 
 def encrypt(pswd):
