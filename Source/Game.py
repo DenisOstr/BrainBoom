@@ -6,11 +6,11 @@ from core import *
 #TODO: update
 #TODO: render
 
-
 def run():
+    print(gameLogoASCII)
+
     while True:
-        print(gameLogoACSII)
-        print(menuScreenEng)
+        setLanguage('menuScreen')
         userSelect = input('> ')
 
         if userSelect in menuSelect:
@@ -22,7 +22,7 @@ def run():
             if userSelect == menuSelectForEditor[0]:
                 authentication()
         else:
-            print(menuSelectNotExists)
+            setLanguage('menuSelectNotExists')
             continue
             
 
@@ -31,6 +31,7 @@ def update():
 
 
 def render():
+    getLanguage()
     run()
 
 

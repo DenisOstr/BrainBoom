@@ -1,0 +1,31 @@
+menuScreen = '''\n>Select:
+        1) Press S key for Start the game
+        2) Press Q key for Quit from the game!'''
+
+menuSelectNotExists = '>This function does not exists!'
+
+loginAdminPanel = '>Login to the system!\n'
+
+enterUsername = '>Enter username: !'
+
+enterPassword = '>Enter password: !'
+
+menuEditor = '''>Welcome to the Editor
+
+    0) Press Backspace key for return game menu
+    1) Press C key for create level
+    2) Press S key for show levels
+    3) Press U key for update level
+    4) Press D key for delete level!'''
+
+userAuthentication = '>Authentication!'
+
+descriptionLevel = '>Enter the description of level:!'
+
+pictureLevel = '>Enter the picture of level:!'
+
+answerLevel = '>Enter the answer of level:!'
+
+enterNumberLevel = '>Enter the number of level:!'
+
+userSelectIncorrect = '>This function does not exists!'

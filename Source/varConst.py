@@ -1,0 +1,32 @@
+#settingLanguage = ['1', '2']
+gameLogoASCII = '''
+           /^\\_/^\\
+         _| 0 | O |            __..._   _...__
+\\/     /~  \\_/ \\_/ \\      _..-"      `Y`      "-._
+ \\____|__________/  \\     \\ Terminal  | for       /
+       \\_______      \\    \\\\  logical |  Python3 //
+               `\\  B  \   \\\\\\  game   |    :)   ///
+                 |  R  |   \\\\\\ _..---.|.---.._ ///
+                 |  A  |    \\\\`_..---.Y.---.._`//
+                 /  I  |
+                /  N   /                           \\
+               /     /'                            \\ \\
+              /  B  /             _----_           \\  \\
+            /  O  /           _-~      ~-_          |  \\
+           (   O  (        _-~    _--_    ~-_     _/   /
+            \\   M  ~-____-~    _-~    ~-_    ~-_-~    /
+             ~-_  V0.1     _-~          ~-_       _-~
+               ~--______-~                ~-___-~
+'''
+
+menuSelect = ['s', 'S', '1', 'q', 'Q', '2']
+menuSelectForEditor = ['e']
+
+attempts = 5
+listLevel = []
+randomLevel = 0
+selectLevel = 0
+
+encryptedPassword = '5994471abb01112afcc18159f6cc74b4f511b99806da59b3caf5a9c173cacfc5'
+
+menuEditor = ['c', 'C', 's', 'S', 'u', 'U', 'd', 'D', 'B']

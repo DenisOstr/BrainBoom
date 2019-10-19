@@ -8,11 +8,14 @@ from core import *
 #TODO: If user does exist then open the editor
 
 def authentication():
-    print(loginAdminPanelEng)
+    setLanguage('loginAdminPanel')
 
     while True:
-        username = input(enterUsernameEng)
-        password = getpass.getpass(enterPasswordEng)
+        setLanguage('enterUsername')
+        username = input('> ')
+
+        setLanguage('enterPassword')
+        password = getpass.getpass('> ')
 
         if username == 'root' and encryptedPassword == encrypt(password).hexdigest():
             editor = Editor()
