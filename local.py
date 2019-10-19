@@ -29,7 +29,7 @@ gameLogoACSII = '''
 
 #languageList = 'English / Русский'
 
-# Sratr Menu
+# Start Menu
 menuScreenEng = '''\nSelect:
         1) Press S key for Start the game
         2) Press Q key for Quit from the game'''
@@ -55,7 +55,7 @@ enterPasswordRu = 'Введите пароль: '
 # Editor
 menuEditorEng = '''Welcome to the Editor
 
-    0) Press Z key for return game munu
+    0) Press Backspace key for return game menu
     1) Press C key for create level
     2) Press S key for show levels
     3) Press U key for update level
@@ -63,7 +63,7 @@ menuEditorEng = '''Welcome to the Editor
 
 menuEditorRu = '''Добро пожаловать в редактор
 
-    0) Нажмите Z, чтобы вернуться назад
+    0) Нажмите Backspace, чтобы вернуться назад
     1) Нажмите C, чтобы создать новый уровень
     2) Нажмите S, чтобы показать все уровни
     3) Нажмите U, чтобы обновить уровень

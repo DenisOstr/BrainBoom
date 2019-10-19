@@ -8,7 +8,7 @@ from core import *
 #TODO: If user does exist then open the editor
 
 def authentication():
-    print(loginAdminPanel)
+    print(loginAdminPanelEng)
 
     while True:
         username = input(enterUsernameEng)

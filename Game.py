@@ -10,7 +10,7 @@ from core import *
 def run():
     while True:
         print(gameLogoACSII)
-        print(menuScreen)
+        print(menuScreenEng)
         userSelect = input('> ')
 
         if userSelect in menuSelect:
@@ -24,37 +24,6 @@ def run():
         else:
             print(menuSelectNotExists)
             continue
-
-
-
-def setLanguage():
-    while True:
-        userSelectLanguage = input('eng / ru\n> ')
-
-
-        if userSelectLanguage == 'eng':
-            # Sratr Menu
-            global menuScreen
-            menuScreen == menuScreenEng
-            global menuSelectNotExists
-            menuSelectNotExists == menuSelectNotExistsEng
-
-            # Auth Local
-            global loginAdminPanel
-            loginAdminPanel == loginAdminPanelEng
-
-            break
-
-        elif userSelectLanguage == 'ru':
-            # Sratr Menu
-            menuScreen = menuScreenRu
-            menuSelectNotExists == menuSelectNotExistsRu
-
-            # Auth Local
-            loginAdminPanel == loginAdminPanelRu
-
-
-            break
             
 
 def update():
@@ -62,7 +31,6 @@ def update():
 
 
 def render():
-    setLanguage()
     run()
 
 
