@@ -27,6 +27,12 @@ listLevel = []
 randomLevel = 0
 selectLevel = 0
 
-encryptedPassword = '5994471abb01112afcc18159f6cc74b4f511b99806da59b3caf5a9c173cacfc5'
+a_username = 'root'
+a_password = '5994471abb01112afcc18159f6cc74b4f511b99806da59b3caf5a9c173cacfc5'
 
 menuEditor = ['c', 'C', 's', 'S', 'u', 'U', 'd', 'D', 'B']
+
+# Path
+p_configFile = '../config.ini'
+p_engLocFile = '../Locals/eng.loc'
+p_ruLocFile = '../Locals/ru.loc'

@@ -11,21 +11,21 @@ def getLanguage():
         userLang = input('> ')
     
         if userLang == 'E':
-            _wConfFile = open('../config.ini', 'w')
+            _wConfFile = open(p_configFile, 'w')
             
             _wConfFile.write('selectedLanguage: Eng.')
 
             _wConfFile.close()
             break
         elif userLang == 'R':
-            _wConfFile = open('../config.ini', 'w')
+            _wConfFile = open(p_configFile, 'w')
             
             _wConfFile.write('selectedLanguage: Ru.')
 
             _wConfFile.close()
             break
         elif userLang == '':
-            _wConfFile = open('../config.ini', 'w')
+            _wConfFile = open(p_configFile, 'w')
             
             _wConfFile.write('selectedLanguage: Eng.')
 
@@ -37,7 +37,7 @@ def getLanguage():
 
 
 def setLanguage(string):
-    _rConfFile = open('../config.ini', 'r')
+    _rConfFile = open(p_configFile, 'r')
     _rConfFile = _rConfFile.read()
 
     fPos = _rConfFile.find('selectedLanguage:')
@@ -51,7 +51,7 @@ def setLanguage(string):
         
 
 def setEng(string):
-    _rEngFile = open('../Locals/eng.loc', 'r')
+    _rEngFile = open(p_engLocFile, 'r')
     _rEngFile = _rEngFile.read()
 
     fPos = _rEngFile.find(string)
@@ -62,7 +62,7 @@ def setEng(string):
 
 
 def setRu(string):
-    _rRuFile = open('../Locals/ru.loc', 'r', encoding='utf8')
+    _rRuFile = open(p_ruLocFile, 'r', encoding='utf8')
     _rRuFile = _rRuFile.read()
 
     fPos = _rRuFile.find(string)
