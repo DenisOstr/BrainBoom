@@ -40,6 +40,7 @@ class Editor:
 
     def mainMenu(self, username):
         print('You logged in as', username)
+        # setLanguage('loggedIn')
         setLanguage('menuEditor')
 
         while True:
@@ -81,8 +82,8 @@ class Editor:
             _mCreateLevel = Model()
             _mCreateLevel.createLevelModel(level, author, desc, pic, ans)
 
-            print('Are you want to exit or continue?')
-            print('Press Q for exit or C for continue: ')
+            setLanguage('wantExitOrContinue')
+            setLanguage('pressQorC')
             userSelect = input('> ')
 
             if userSelect == 'C':
@@ -90,7 +91,7 @@ class Editor:
             elif userSelect == 'Q':
                 self.mainMenu(username)
             else:
-                print('This key is not found')
+                setLanguage('keyNotFound')
                 self.mainMenu(username)
 
 

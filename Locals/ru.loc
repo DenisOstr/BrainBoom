@@ -29,3 +29,15 @@ answerLevel = '>Введите ответ уровня!'
 enterNumberLevel = '>Введите номер уровня!'
 
 userSelectIncorrect = '>Данной функции не существует!'
+
+usernameNotFound = '>Пользователь с таким ником не найден!'
+
+passwordNotFound = '>Пользователь с таким паролем не найден!'
+
+loggedIn = '>Вы зашли, как!'
+
+wantExitOrContinue = '>Вы хотите выйти или продолжить?!'
+
+pressQorC = '>Нажмите Q для выхода или C для продолжения:!'
+
+keyNotFound = '>Данная клавиша не найдена!'

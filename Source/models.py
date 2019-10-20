@@ -18,3 +18,11 @@ class Model:
 
     def showLevelModel(self):
         pass
+
+
+    def updateLevelModel(self):
+        pass
+
+
+    def deleteLevelModel(self):
+        pass

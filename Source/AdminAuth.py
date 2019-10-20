@@ -23,10 +23,10 @@ def authentication():
             break
         else:
             if username != a_username:
-                print('User with such username is not found')
+                setLanguage('usernameNotFound')
                 continue
             elif a_password != encrypt(password).hexdigest():
-                print('User with such password is not found')
+                setLanguage('passwordNotFound')
                 continue
 
 

@@ -29,3 +29,15 @@ answerLevel = '>Enter the answer of level:!'
 enterNumberLevel = '>Enter the number of level:!'
 
 userSelectIncorrect = '>This function does not exists!'
+
+usernameNotFound = '>User with such username is not found!'
+
+passwordNotFound = '>User with such password is not found!'
+
+loggedIn = '>You logged in as!'
+
+wantExitOrContinue = '>Are you want to exit or continue?!'
+
+pressQorC = '>Press Q for exit or C for continue:!'
+
+keyNotFound = '>This key is not found!'
