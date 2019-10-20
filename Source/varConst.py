@@ -36,3 +36,4 @@ menuEditor = ['c', 'C', 's', 'S', 'u', 'U', 'd', 'D', 'B']
 p_configFile = '../config.ini'
 p_engLocFile = '../Locals/eng.loc'
 p_ruLocFile = '../Locals/ru.loc'
+p_levelFile = '../level.ini'

@@ -5,27 +5,16 @@ class Model:
         pass
 
 
-    def createLevelModel(self, count, level, author, desc, pic, ans):
-        _rLevelFile = open('../level.ini', 'r')
-        _rLevelFile = _rLevelFile.read()
-
-        fPos = _rLevelFile.find('levelCount:')
-        sPos = _rLevelFile.find(' ', fPos)
-        tPos = _rLevelFile.find('.', sPos)
-
-        levelCount = int(_rLevelFile[sPos+1:tPos])
-        levelCount += count
-
-        if levelCount is not '':
-            _wLevelFile = open('../level.ini', 'w')
+    def createLevelModel(self, level, author, desc, pic, ans):
+        if level is not '':
+            _wLevelFile = open(p_levelFile, 'a')
             
-            _wLevelFile.write('levelCount: %s.' % levelCount)
+            _wLevelString = 'level:#%s.' % level + '\n' + 'author: %s.' % author +\
+                '\n' + 'description: %s.' % desc + '\n' + 'picture: %s.' % pic + '\n' + 'answer: %s.' % ans + '\n\n'
+            _wLevelFile.write(_wLevelString)
 
             _wLevelFile.close()
 
-        # _wLevelFile = open('../level.ini', 'a+')
-        
-        # _wLevelString = '\n\n' + 'Level: %s' % level
-        # _wLevelFile.write(_wLevelString)
 
-        # _wLevelFile.close()
+    def showLevelModel(self):
+        pass

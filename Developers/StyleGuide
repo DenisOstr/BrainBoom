@@ -30,3 +30,4 @@ RULE #9: Формат некоторых переменных:
     _m - model
     p_ - path
     a_ - admin
+    _l - loop

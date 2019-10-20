@@ -8,8 +8,34 @@ from core import *
 
 class Editor:
     def __init__(self):
-        self.count = 0
-        self.level = 0
+        _rLevelFile = open(p_levelFile, 'r')
+        _rLevelFile = _rLevelFile.read()
+
+        if _rLevelFile == '':
+            self.count = 1
+        else:
+            getLevelsData = []
+
+            _rLevelFile = _rLevelFile.split()
+
+            for _lGetLevels in _rLevelFile:
+                if _lGetLevels.startswith('level'):
+                    getLevelsData.append(_lGetLevels)
+
+            levels = []
+            maxLevel = 0
+
+            for _lLevel in getLevelsData:
+                fPos = _lLevel.find('level')
+                sPos = _lLevel.find('#', fPos)
+                tPos = _lLevel.find('.', sPos)
+
+                levels.append(_lLevel[sPos+1:tPos])
+
+            maxLevel = max(levels)
+            maxLevel = int(maxLevel)
+
+            self.count = maxLevel + 1
 
 
     def mainMenu(self, username):
@@ -39,7 +65,7 @@ class Editor:
         while True:
             author = username
 
-            self.level = self.count
+            level = self.count
 
             setLanguage('descriptionLevel')
             desc = input('> ')
@@ -50,10 +76,10 @@ class Editor:
             setLanguage('answerLevel')
             ans = input('> ')
 
-            self.count = 1
+            self.count += 1
 
             _mCreateLevel = Model()
-            _mCreateLevel.createLevelModel(self.count, self.level, author, desc, pic, ans)
+            _mCreateLevel.createLevelModel(level, author, desc, pic, ans)
 
             print('Are you want to exit or continue?')
             print('Press Q for exit or C for continue: ')
@@ -65,17 +91,15 @@ class Editor:
                 self.mainMenu(username)
             else:
                 print('This key is not found')
-                continue
-
-        # while True:
-        #     i = 0
-
-        #     file(count, i += 1, username, desc, pic, ans)
+                self.mainMenu(username)
 
 
     def showLevel(self):
         setLanguage('enterNumberLevel')
         numberOfLevel = input('> ')
+
+        _mShowLevel = Model()
+        _mShowLevel.showLevelModel()
 
         # firstPos = file.startswith("level:")
 
