@@ -8,7 +8,7 @@ class Model:
     def createLevelModel(self, level, author, desc, pic, ans):
         if level is not '':
             _wLevelFile = open(p_levelFile, 'a')
-            
+
             _wLevelString = 'level:#%s.' % level + '\n' + 'author: %s.' % author +\
                 '\n' + 'description: %s.' % desc + '\n' + 'picture: %s.' % pic + '\n' + 'answer: %s.' % ans + '\n\n'
             _wLevelFile.write(_wLevelString)
@@ -25,4 +25,11 @@ class Model:
 
 
     def deleteLevelModel(self):
-        pass
+        print('x')
+        _wLevelFile = open(p_levelFile, 'a')
+
+        fPos = _lLevel.find('level')
+        sPos = _lLevel.find('#', fPos)
+        tPos = _lLevel.find('.', sPos)
+
+        _wLevelFile.write('')

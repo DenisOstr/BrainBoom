@@ -113,4 +113,14 @@ class Editor:
 
 
     def deleteLevel(self):
-        pass
+        while True:
+            setLanguage('enterNumberLevel')
+            numberOfLevel = input('> ')
+
+            _mDeleteLevel = Model()
+            _mDeleteLevel.deliteLevelModel()
+
+            deliteLevel = input('[Y]es / [N]o: ')
+
+            if deliteLevel == 'y':
+                deleteLevelModel()
