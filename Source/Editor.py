@@ -39,9 +39,8 @@ class Editor:
 
 
     def mainMenu(self, username):
-        print('You logged in as', username)
-        # setLanguage('loggedIn')
-        setLanguage('menuEditor')
+        setLanguage('loggedIn', username)
+        setLanguage('menuEditor', '')
 
         while True:
             userSelect = input('> ')
@@ -58,7 +57,7 @@ class Editor:
                 elif userSelect == menuEditor[8]:
                     sys.exit()
             else:
-                setLanguage('userSelectIncorrect')
+                setLanguage('userSelectIncorrect', '')
                 continue
 
 
@@ -68,13 +67,13 @@ class Editor:
 
             level = self.count
 
-            setLanguage('descriptionLevel')
+            setLanguage('descriptionLevel', '')
             desc = input('> ')
 
-            setLanguage('pictureLevel')
+            setLanguage('pictureLevel', '')
             pic = input('> ')
 
-            setLanguage('answerLevel')
+            setLanguage('answerLevel', '')
             ans = input('> ')
 
             self.count += 1
@@ -82,8 +81,8 @@ class Editor:
             _mCreateLevel = Model()
             _mCreateLevel.createLevelModel(level, author, desc, pic, ans)
 
-            setLanguage('wantExitOrContinue')
-            setLanguage('pressQorC')
+            setLanguage('wantExitOrContinue', '')
+            setLanguage('pressQorC', '')
             userSelect = input('> ')
 
             if userSelect == 'C':
@@ -91,12 +90,12 @@ class Editor:
             elif userSelect == 'Q':
                 self.mainMenu(username)
             else:
-                setLanguage('keyNotFound')
+                setLanguage('keyNotFound', '')
                 self.mainMenu(username)
 
 
     def showLevel(self):
-        setLanguage('enterNumberLevel')
+        setLanguage('enterNumberLevel', '')
         numberOfLevel = input('> ')
 
         _mShowLevel = Model()

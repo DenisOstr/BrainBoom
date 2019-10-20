@@ -10,7 +10,7 @@ def run():
     print(gameLogoASCII)
 
     while True:
-        setLanguage('menuScreen')
+        setLanguage('menuScreen', '')
         userSelect = input('> ')
 
         if userSelect in menuSelect:
@@ -22,7 +22,7 @@ def run():
             if userSelect == menuSelectForEditor[0]:
                 authentication()
         else:
-            setLanguage('menuSelectNotExists')
+            setLanguage('menuSelectNotExists', '')
             continue
             
 

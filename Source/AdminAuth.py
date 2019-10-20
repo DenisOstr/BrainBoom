@@ -8,13 +8,13 @@ from core import *
 #TODO: If user does exist then open the editor
 
 def authentication():
-    setLanguage('loginAdminPanel')
+    setLanguage('loginAdminPanel', '')
 
     while True:
-        setLanguage('enterUsername')
+        setLanguage('enterUsername', '')
         username = input('> ')
 
-        setLanguage('enterPassword')
+        setLanguage('enterPassword', '')
         password = getpass.getpass('> ')
 
         if username == a_username and a_password == encrypt(password).hexdigest():
@@ -23,10 +23,10 @@ def authentication():
             break
         else:
             if username != a_username:
-                setLanguage('usernameNotFound')
+                setLanguage('usernameNotFound', '')
                 continue
             elif a_password != encrypt(password).hexdigest():
-                setLanguage('passwordNotFound')
+                setLanguage('passwordNotFound', '')
                 continue
 
 

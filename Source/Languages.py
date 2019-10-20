@@ -36,7 +36,7 @@ def getLanguage():
             continue
 
 
-def setLanguage(string):
+def setLanguage(string, name):
     _rConfFile = open(p_configFile, 'r')
     _rConfFile = _rConfFile.read()
 
@@ -45,12 +45,12 @@ def setLanguage(string):
     tPos = _rConfFile.find('.', sPos)
 
     if _rConfFile[sPos+1:tPos] == 'Eng':
-        setEng(string)
+        setEng(string, name)
     elif _rConfFile[sPos+1:tPos] == 'Ru':
-        setRu(string)
+        setRu(string, name)
         
 
-def setEng(string):
+def setEng(string, name):
     _rEngFile = open(p_engLocFile, 'r')
     _rEngFile = _rEngFile.read()
 
@@ -58,10 +58,10 @@ def setEng(string):
     sPos = _rEngFile.find('>', fPos)
     tPos = _rEngFile.find('!', fPos)
 
-    print('\n', _rEngFile[sPos+1:tPos], '\n')
+    print('\n', _rEngFile[sPos+1:tPos], name, '\n')
 
 
-def setRu(string):
+def setRu(string, name):
     _rRuFile = open(p_ruLocFile, 'r', encoding='utf8')
     _rRuFile = _rRuFile.read()
 
@@ -69,4 +69,4 @@ def setRu(string):
     sPos = _rRuFile.find('>', fPos)
     tPos = _rRuFile.find('!', fPos)
 
-    print('\n', _rRuFile[sPos+1:tPos], '\n')
+    print('\n', _rRuFile[sPos+1:tPos], name, '\n')
